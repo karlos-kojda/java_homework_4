@@ -55,7 +55,7 @@ public class MainClass {
 
         // 3.3 Using Java stream API find out what is the average price of the book in the list
         System.out.println("\nExercise 3.3");
-        List<Book> bookList2 = Stream.of(new Book("Lord of the rings", 150),
+        System.out.println(Stream.of(new Book("Lord of the rings", 150),
                         new Book("Harry Potter", 125),
                         new Book("Witcher", 200),
                         new Book("Avengers", 95),
@@ -63,8 +63,6 @@ public class MainClass {
                         new Book("Dog is my friend", 80),
                         new Book("Book with no end", 55),
                         new Book("Dog", 50))
-                .collect(Collectors.toList());
-        System.out.println(bookList2.stream()
                 .mapToInt(A -> A.getPrice())
                 .average().getAsDouble());
 
